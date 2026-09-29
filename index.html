@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant L'Essentiel | Gastronomie Paris</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background: #1a1a1a;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            color: #c9a227;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: #c9a227;
+        }
+        
+        .btn-reserver {
+            background: #c9a227;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            color: #1a1a1a !important;
+            font-weight: bold;
+        }
+        
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), #444;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding-top: 80px;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .btn-primary {
+            display: inline-block;
+            background: #c9a227;
+            color: #1a1a1a;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: transform 0.3s;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px);
+        }
+        
+        .section {
+            padding: 5rem 0;
+        }
+        
+        .section h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #1a1a1a;
+        }
+        
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .menu-item {
+            background: #f5f5f5;
+            padding: 2rem;
+            border-radius: 8px;
+        }
+        
+        .menu-item h3 {
+            color: #c9a227;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #c9a227;
+            padding-bottom: 0.5rem;
+        }
+        
+        .menu-item ul {
+            list-style: none;
+        }
+        
+        .menu-item li {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.75rem 0;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .menu-item span {
+            color: #c9a227;
+            font-weight: bold;
+        }
+        
+        .reservation {
+            background: #f5f5f5;
+        }
+        
+        .reservation-form {
+            max-width: 600px;
+            margin: 0 auto;
+            display: grid;
+            gap: 1rem;
+        }
+        
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+        
+        .reservation-form button {
+            width: 100%;
+            border: none;
+            cursor: pointer;
+        }
+        
+        footer {
+            background: #1a1a1a;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+        
+        footer p {
+            margin: 0.5rem 0;
+        }
+        
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <a href="#" class="logo">L'Essentiel</a>
+            <ul class="nav-links">
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#reservation" class="btn-reserver">Réserver</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="accueil" class="hero">
+        <div class="container">
+            <h1>L'art de la cuisine française</h1>
+            <p>Une expérience gastronomique unique au cœur de Paris</p>
+            <a href="#reservation" class="btn-primary">Réserver une table</a>
+        </div>
+    </section>
+
+    <section id="menu" class="section">
+        <div class="container">
+            <h2>Notre Menu</h2>
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <h3>Entrées</h3>
+                    <ul>
+                        <li>Foie gras maison <span>24€</span></li>
+                        <li>Saint-Jacques rôties <span>28€</span></li>
+                        <li>Soupe de saison <span>14€</span></li>
+                    </ul>
+                </div>
+                <div class="menu-item">
+                    <h3>Plats</h3>
+                    <ul>
+                        <li>Filet de bœuf <span>42€</span></li>
+                        <li>Homard breton <span>58€</span></li>
+                        <li>Risotto aux truffes <span>36€</span></li>
+                    </ul>
+                </div>
+                <div class="menu-item">
+                    <h3>Desserts</h3>
+                    <ul>
+                        <li>Soufflé au chocolat <span>16€</span></li>
+                        <li>Tarte Tatin <span>14€</span></li>
+                        <li>Crème brûlée <span>12€</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="reservation" class="section reservation">
+        <div class="container">
+            <h2>Réserver une table</h2>
+            <form class="reservation-form">
+                <div class="form-group">
+                    <input type="text" placeholder="Votre nom" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="Votre email" required>
+                </div>
+                <div class="form-group">
+                    <input type="date" required>
+                </div>
+                <div class="form-group">
+                    <select required>
+                        <option value="">Nombre de personnes</option>
+                        <option value="2">2 personnes</option>
+                        <option value="4">4 personnes</option>
+                        <option value="6">6 personnes</option>
+                        <option value="8+">8+ personnes</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn-primary">Confirmer la réservation</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Restaurant L'Essentiel. Tous droits réservés.</p>
+            <p>📍 123 Rue de la Gastronomie, 75001 Paris | 📞 01 23 45 67 89</p>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelector('.reservation-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Merci pour votre réservation ! Nous vous contacterons pour confirmation.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
